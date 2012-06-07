@@ -27,6 +27,7 @@ var plushTypes = ["Dragon" , "Fox"];
 var tugRopeTypes = ["Green and Black" , "Red and Yellow"];
 var plushAvail = [ "sounds" , "doesn\'t sound" ];
 var tugRopeAvail = [ "is" , "isn\'t" ];
+var myFace = 30;
 var toRam2 = true;
 var wifeJoins = false;
 var laugh = "\"Bwaahaahaa, Ur missing ur face!\"";
@@ -34,7 +35,7 @@ var laugh = "\"Bwaahaahaa, Ur missing ur face!\"";
 
 
 // Old Variables
-var myCash = 25; // It should be more than just $25. *Sniff, sniff*
+
 var storeNames = [ "GameStop", "Walmart", "Bookman\'s", "Movie Theater" ],
 	minPerStore = [ 50, 20, 30, 120 ];
 var hoursLeft = 2;
@@ -85,16 +86,16 @@ var funToys = function (toyType) {
 };
 
 // While-Loop Function
-// Note about what it does.
+// The Puggle is biting my face off little by little.
 // Not Done
-var song = function () {
-	while (myCash > 0) {
-		say( "\"" + myCash + " dollars are fleeting. Oh NOES!!!\"" );
-		myCash--;
+var biting = function () {
+	while (myFace > 0) {
+		say( "\"" + myFace + " inches of flesh are leaving my face! Oh NOES!!!\"" );
+		myFace--;
 	};
-	say( "\"No more cash in my wallet. What should I do?\"" );
-	noCash = 0;
-	return noCash;
+	say( "\"I have no more face left!!!\"" );
+	noFace = 0;
+	return noFace;
 };
 
 // For-Loop Function
@@ -156,12 +157,20 @@ if (toRam1 === true) {
 };
 toyTeasing("I\'m" , toyType);
 funToys(toyType);
+say("\*The Puggle is having fun with the " + toyType + ", so she avoids my face for the moment\*");
+say("\*Oh noes!!! I spoke to soon!!! She starts to attack my face again!!!\*");
+biting();
+say("\*After the attack, I look in the mirror.\*");
+say("\*I have " + noFace + " inches of my face left, darn!\*");
+say("\"I guess I\'ll have to get plastic surgery then.\"");
 
 if (toRam2 === true){
 	say("\*The Chihuahua wants to join in and help bite my face off.\*");
-	if (howManyDogs > 1) {
+	if (howManyDogs > 1 && wifeJoins === true) {
+		say("\*My wife joins in instead and teases the Puggle, by saying " + cuteLevel1 + "\*");
 		say(puggleRam);
 	} else {
+		say("\*My wife just looks at us and laughs saying\* " + laugh);
 		say(cuteLevel1);
 	};
 } else {
@@ -172,6 +181,7 @@ if (toRam2 === true){
 		say("\*My wife just looks at us and laughs saying\* " + laugh);
 	};
 };
+
 say("\"The End!\"");
 
 
@@ -204,7 +214,7 @@ say("What should I do?");
 
 say("I sing a song to myself!");
 
-song();
+// song();
 
 say("A quick glance at my wallet confirms the song\'s truth...");
 
