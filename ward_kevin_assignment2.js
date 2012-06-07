@@ -17,6 +17,38 @@ var toRam2 = true;
 var wifeJoins = false;
 var laugh = "\"Bwaahaahaa, Ur missing ur face!\"";
 
+
+// Argument Funtion
+var snoozeAlarm = function (snooze) {
+	annoyingMe = true;
+	if (snooze === annoyingMe) {
+		say( "\"Shut up you stupid bleeping alarm!\" " + "\*I snooze the alarm.\*" );
+		say( "\*15 minutes later...\* " + "\"OK, I\'M UP! Happy now, alarm?\"" );
+		say( "\*The alarm smirks\*" );
+	}
+	else {
+		say( "\"Ok, ok, I\'ll get up now..." + "stupid alarm...\"" );
+		say( "\*The alarm smirks\*" );
+	}
+	return;
+};
+
+var playTime = function (playingTime) {
+	longTime = true;
+	if (playingTime === longTime) {
+		say("How long should I play for?");
+		say("I'd say about 5 hours today.");
+	}
+	else {
+		say("I shouldn't play too long.");
+		say("Maybe only for like 2 hours.");
+	}
+	return;
+};
+
+
+
+
 // Output of variables to make sure they work.
 say(puggleRam);
 say(cuteLevel1);
@@ -26,6 +58,10 @@ say(toRam1);
 say(toRam2);
 say(wifeJoins);
 say(laugh);
+
+
+
+
 
 // My Story in code.
 say("\"My wife and I have " + howManyDogs + " cute dogs.\"");
@@ -85,3 +121,266 @@ could join the mix and also try to bite my face off! Then we have a Puggle Rampa
 	* She joins and they bite both our faces off
 	* She stays back and laughs at my missing face
 */
+
+
+
+/*
+var snoozeAlarm = true;
+var foodType = "cereal"; // "cereal" or "ramen"
+var cerealTypes = [ "Berry Crunch", "Honey Bunches of Oats" ];
+var ramenTypes = [ "Tomato Ramen", "Soupy Ramen" ];
+var cerealAvailable = [ "is", "is not" ];
+var ramenAvailable = [ "is", "is" ];
+var myMoney = 100; // I wish!
+var storeNames = [ "GameStop", "Walmart", "Petco", "Petsmart" ],
+	minPerStore = [ 50, 20, 30, 25 ];
+	
+// Say function to save space in the code.
+var say = function(message) { console.log(message); };
+
+// Argument Funtion
+var snoozeAlarm = function (snooze) {
+	annoyingMe = true;
+	if (snooze === annoyingMe) {
+		say( "\"Shut up you stupid bleeping alarm!\" " + "\*I snooze the alarm.\*" );
+		say( "\*15 minutes later...\* " + "\"OK, I\'M UP! Happy now, alarm?\"" );
+		say( "\*The alarm smirks\*" );
+	}
+	else {
+		say( "\"Ok, ok, I\'ll get up now..." + "stupid alarm...\"" );
+		say( "\*The alarm smirks\*" );
+	}
+	return;
+};
+
+// Double Argument Function
+var feedMeSomething = function (pronoun, typeOfFood) {
+	if ( foodType === "cereal" ) {
+		say( "\"" + pronoun + " thinking of eating " + typeOfFood + "\"" );
+	} else {
+		say( "\"" + pronoun + " thinking of eating " + typeOfFood + "\"" );
+	};
+};
+
+// Double String Function
+var availableFood = function (foodType) {
+	if ( foodType === "cereal" ){
+		for (var i = 0, j = cerealTypes.length; i < j; i++) {
+			say( "The cereal " + cerealTypes[i] + ", " + cerealAvailable[i] + " available." );
+		};
+	} else {
+		for (var i = 0, j = ramenTypes.length; i < j; i++) {
+			say( "The " + ramenTypes[i] + ", " + ramenAvailable[i] + " available." );
+		};
+	};
+};
+
+// While-Loop Function
+var song = function () {
+	while (myMoney > 0) {
+		say( "\"" + myMoney + " dollars are fleeing my wallet.\"" );
+		myMoney--;
+	};
+	say( "\"No more dollars in my wallet.\"" );
+	noMoney = 0;
+	return noMoney;
+};
+
+// For-Loop Function
+var shopOneStore = function(storeName, minThisStore){
+	say("\"Shopping at the " + storeName + " for "
+		+ minThisStore + " minutes.\"");
+	for (var minutes = 0; minutes < minThisStore; minutes += 5){
+		var minRemain = minThisStore - minutes;
+		say( "\"" + minutes + " have past, " + minRemain + " to go!\"" );
+	};
+	
+	say( "\"I'm done with the store " + storeName + ", for now! BWAAA HAAA HAAA!!\"" );
+};
+
+var goToStores = function(storeNames, minPerStore) {
+	for (var storeNumber = 0; storeNumber < storeNames.length; storeNumber++){
+		var storeName = storeNames[storeNumber],
+			minThisStore = minPerStore[storeNumber];
+		shopOneStore( storeName, minThisStore );
+	};
+};
+
+// The Start of My Morning Adventure
+say( "\*I\'m sleeping soundly in bed, when the alarm starts to ring.\*" );
+var gotAnnoyed = snoozeAlarm(true);
+
+say( "\*I wake up and stub my big toe as I\'m walking to the bathroom.\*" );
+
+say( "\*I wash my hands, then I walk to the kitchen to find something to eat.\*" );
+
+say( "\*I ask to myself\* \"What should I eat for breakfast?\"" );
+
+feedMeSomething("I\'m", foodType);
+
+say( "\*I look around the kitchen to find some " + foodType + ".\*" );
+
+availableFood(foodType);
+
+say( "\*I eat the " + foodType + ".\*" );
+
+say( "\*I\'m bored, so I sing myself a song.\*" );
+
+song();
+
+say( "\*I look in my wallet, and find that it's true\*" );
+say( "\*I yell out!\*" + " \"I have " + noMoney + " dollars in my wallet!\"" );
+
+say( "\"Well, I guess that means no going to the store for more milk and cookies...\"" );
+
+say( "\"But that doesn't mean I can\'t window shop!!!\"" )
+
+say( "\*So I hit the streets\*" );
+
+goToStores(storeNames, minPerStore);
+
+say( "\"The End! For Now! BWAA HAA HAA\"" );
+*/
+
+
+
+/*
+var playTime = true;
+var foodType = "hamburgers"; // "hamburgers" or "pasta"
+var bunToppings = ["mayo, mustard, BBQ sauce, and cheese slices" , "ketchup, mustard, relish, and cheese slices"];
+var pastaTypes = ["Chicken Alfredo" , "Spagetti"];
+var condosAvail = [ "sound" , "don\'t sound" ];
+var pastaAvail = [ "is" , "is" ];
+var myCash = 25; // It should be more than just $25. *Sniff, sniff*
+var storeNames = [ "GameStop", "Walmart", "Bookman\'s", "Movie Theater" ],
+	minPerStore = [ 50, 20, 30, 120 ];
+var hoursLeft = 2;
+
+// Say function for space saving code power!
+var say = function(message) { console.log(message); };
+
+// My Happy Functions
+
+// Argument Function
+var playTime = function (playingTime) {
+	longTime = true;
+	if (playingTime === longTime) {
+		say("How long should I play for?");
+		say("I'd say about 5 hours today.");
+	}
+	else {
+		say("I shouldn't play too long.");
+		say("Maybe only for like 2 hours.");
+	}
+	return;
+};
+
+// Double Argument Function
+var feedingTime = function (pronoun , typeOfYummies) {
+	if ( foodType === "hamburgers" ) {
+		say("\"" + pronoun + " wanting to eat " + typeOfYummies + "!\"");
+		say("I search the kitchen for some " + foodType + ".");
+		say("So I start grilling up some nice, juicy " + foodType + " in the kitchen.");
+		say("What condiments should I slather over my buns?");
+	} else {
+		say("\"" + pronoun + " wanting to eat " + typeOfYummies + "!\"");
+		say("I search the kitchen for some " + foodType + ".");
+		say("So I start cooking up some nice, flavorful " + foodType + " on the stove.");
+		say("What kinds of pasta do I have?");
+	};
+};
+
+// Double String Function
+var yumFood = function (foodType) {
+	if ( foodType === "hamburgers" ){
+		for (var i = 0, j = bunToppings.length; i < j; i++) {
+			say( "The condiments " + bunToppings[i] + ", " + condosAvail[i] + " good." );
+		};
+	} else {
+		for (var i = 0, j = pastaTypes.length; i < j; i++) {
+			say( "The " + pastaTypes[i] + ", " + pastaAvail[i] + " available." );
+		};
+	};
+};
+
+// While-Loop Function
+var song = function () {
+	while (myCash > 0) {
+		say( "\"" + myCash + " dollars are fleeting. Oh NOES!!!\"" );
+		myCash--;
+	};
+	say( "\"No more cash in my wallet. What should I do?\"" );
+	noCash = 0;
+	return noCash;
+};
+
+// For-Loop Function
+var shopOneStore = function(storeName, minThisStore){
+	say("\"Shopping at " + storeName + " for "
+		+ minThisStore + " minutes.\"");
+	for (var minutes = 0; minutes < minThisStore; minutes += 5){
+		var minRemain = minThisStore - minutes;
+		say( "\"" + minutes + " have past, " + minRemain + " left to go!\"" );
+	};
+	
+	say( "\"I'm done with " + storeName + ", for now! *Snicker*\"" );
+};
+
+var goToStores = function(storeNames, minPerStore) {
+	for (var storeNumber = 0; storeNumber < storeNames.length; storeNumber++){
+		var storeName = storeNames[storeNumber],
+			minThisStore = minPerStore[storeNumber];
+		shopOneStore( storeName, minThisStore );
+	};
+};
+
+// My Procrastination Adventure!
+
+say("It\'s 10am, time to get on to my schoolwork for the week.");
+
+say("I don\'t really feel up to it, so I make a decision to play my game console instead.");
+
+var gameTime = playTime(true);
+
+say("Crap, it\'s really three o\'clock, I should get started on school.");
+
+say("But, it can wait a couple more hours, so I decide to get something to eat.");
+
+say("Oh but what to eat?");
+
+say("I have pasta or hamburgers, hmmm.");
+
+feedingTime("I\'m" , foodType);
+
+yumFood(foodType);
+
+say("I eat up all the yumminess, and finally decide I\'m ready for the week\'s schoolwork.");
+
+say("But now I only have a couple hours left in the day until it\'s due.");
+
+say("What should I do?");
+
+say("I sing a song to myself!");
+
+song();
+
+say("A quick glance at my wallet confirms the song\'s truth...");
+
+say("I have " + noCash + " cash in my wallet, darn!");
+
+say("Okay, I think I\'m done singing for the week... Now what?");
+
+say("There isn't much time left today. What to do now?");
+
+say("Cram as much as I can in the hours I have left, or go Shopping?");
+
+say("Number 2 sounds really good to me.");
+
+goToStores(storeNames, minPerStore);
+
+say("\"Now it's really late! I need to get some rest.\"");
+
+say("The End!");
+*/
+
+
