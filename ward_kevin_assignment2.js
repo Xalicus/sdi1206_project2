@@ -8,7 +8,8 @@
 var say = function(message) { console.log(message); };
 
 // Variables
-var backStory = function () { say("\"My wife Katt and I have " + howManyDogs + " cute dogs.\"");
+var backStory = function () { 
+				say("\"My wife Katt and I have " + howManyDogs + " cute dogs.\"");
 				say("\"One is a boy Chihuahua, the other is a female Puggle.\"");
 				say("\"They are both so cute, but the Puggle can get really hyper.\"");
 				say("\"If one of us teases her too much she\'ll start whining and get all hyper.\"");
@@ -21,6 +22,11 @@ var cuteLevel2 = "\"She\'s so CUTE!!!\"";
 var howManyDogs = 2;
 var teaseTime = true;
 var toRam1 = true;
+var toyType = "plushie"; // "plushie" or "tug rope"
+var plushTypes = ["Dragon" , "Fox"];
+var tugRopeTypes = ["Green and Black" , "Red and Yellow"];
+var plushAvail = [ "sounds" , "doesn\'t sound" ];
+var tugRopeAvail = [ "is" , "isn\'t" ];
 var toRam2 = true;
 var wifeJoins = false;
 var laugh = "\"Bwaahaahaa, Ur missing ur face!\"";
@@ -28,11 +34,6 @@ var laugh = "\"Bwaahaahaa, Ur missing ur face!\"";
 
 
 // Old Variables
-var foodType = "hamburgers"; // "hamburgers" or "pasta"
-var bunToppings = ["mayo, mustard, BBQ sauce, and cheese slices" , "ketchup, mustard, relish, and cheese slices"];
-var pastaTypes = ["Chicken Alfredo" , "Spagetti"];
-var condosAvail = [ "sound" , "don\'t sound" ];
-var pastaAvail = [ "is" , "is" ];
 var myCash = 25; // It should be more than just $25. *Sniff, sniff*
 var storeNames = [ "GameStop", "Walmart", "Bookman\'s", "Movie Theater" ],
 	minPerStore = [ 50, 20, 30, 120 ];
@@ -43,7 +44,7 @@ var hoursLeft = 2;
 // How long should I tease the Puggle?
 // Done
 var teaseTime = function (teasingTime) {
-	aWhile = false;
+	aWhile = true;
 	if (teasingTime === aWhile) {
 		say("\"Hey Katt, how long should I tease her for?\"");
 		say("\*Katt says.\* \"I\'d say about 10 minutes today.\"");
@@ -56,53 +57,29 @@ var teaseTime = function (teasingTime) {
 };
 
 // Double Argument Function
-// Note about what it does.
-// Not Done
-var feedMeSomething = function (pronoun, typeOfFood) {
-	if ( foodType === "cereal" ) {
-		say( "\"" + pronoun + " thinking of eating " + typeOfFood + "\"" );
+// What should I tease her with?
+// Done
+var toyTeasing = function (pronoun , teaseToy) {
+	if ( toyType === "plushie" ) {
+		say("\"" + pronoun + " thinking of using a " + teaseToy + " to tease the Puggle with!\"");
+		say("I look around for the " + toyType + ".");
 	} else {
-		say( "\"" + pronoun + " thinking of eating " + typeOfFood + "\"" );
-	};
-};
-
-var feedingTime = function (pronoun , typeOfYummies) {
-	if ( foodType === "hamburgers" ) {
-		say("\"" + pronoun + " wanting to eat " + typeOfYummies + "!\"");
-		say("I search the kitchen for some " + foodType + ".");
-		say("So I start grilling up some nice, juicy " + foodType + " in the kitchen.");
-		say("What condiments should I slather over my buns?");
-	} else {
-		say("\"" + pronoun + " wanting to eat " + typeOfYummies + "!\"");
-		say("I search the kitchen for some " + foodType + ".");
-		say("So I start cooking up some nice, flavorful " + foodType + " on the stove.");
-		say("What kinds of pasta do I have?");
+		say("\"" + pronoun + " wanting to tease her with a " + teaseToy + "!\"");
+		say("I look around and find the " + toyType + ".");
 	};
 };
 
 // Double String Function
-// Note about what it does.
-// Not Done
-var availableFood = function (foodType) {
-	if ( foodType === "cereal" ){
-		for (var i = 0, j = cerealTypes.length; i < j; i++) {
-			say( "The cereal " + cerealTypes[i] + ", " + cerealAvailable[i] + " available." );
+// What kind of toy do I use of that type?
+// Done
+var funToys = function (toyType) {
+	if ( toyType === "plushie" ){
+		for (var i = 0, j = plushTypes.length; i < j; i++) {
+			say( "The " + plushTypes[i] + " plushie, " + plushAvail[i] + " good." );
 		};
 	} else {
-		for (var i = 0, j = ramenTypes.length; i < j; i++) {
-			say( "The " + ramenTypes[i] + ", " + ramenAvailable[i] + " available." );
-		};
-	};
-};
-
-var yumFood = function (foodType) {
-	if ( foodType === "hamburgers" ){
-		for (var i = 0, j = bunToppings.length; i < j; i++) {
-			say( "The condiments " + bunToppings[i] + ", " + condosAvail[i] + " good." );
-		};
-	} else {
-		for (var i = 0, j = pastaTypes.length; i < j; i++) {
-			say( "The " + pastaTypes[i] + ", " + pastaAvail[i] + " available." );
+		for (var i = 0, j = tugRopeTypes.length; i < j; i++) {
+			say( "The " + tugRopeTypes[i] + " tug rope, " + tugRopeAvail[i] + " around here." );
 		};
 	};
 };
@@ -158,7 +135,6 @@ say(laugh);
 
 
 
-
 // My Puggle Story in code.
 /* backStory()
 say("\"My wife and I have " + howManyDogs + " cute dogs.\"");
@@ -171,15 +147,15 @@ say("\"We like to call it the " + puggleRam + "\"");
 
 backStory();
 say("\*I choose to tease the Puggle by saying, " + cuteLevel1 + " and " + cuteLevel2 + "\"");
-
-var toTease = teaseTime(true);
-
+teaseTime(true);
 say("\*I also wag my head back and forth, while whining back at her.\*");
 if (toRam1 === true) {
 	say("\*She gets upset and hyper and she bites my face off!\*");
 } else {
 	say("\*The Puggle ignores it this time and we have furry snuggles.\*");
 };
+toyTeasing("I\'m" , toyType);
+funToys(toyType);
 
 if (toRam2 === true){
 	say("\*The Chihuahua wants to join in and help bite my face off.\*");
@@ -216,9 +192,9 @@ say("Oh but what to eat?");
 
 say("I have pasta or hamburgers, hmmm.");
 
-feedingTime("I\'m" , foodType);
+// toyTease("I\'m" , foodType);
 
-yumFood(foodType);
+// yumFood(foodType);
 
 say("I eat up all the yumminess, and finally decide I\'m ready for the week\'s schoolwork.");
 
