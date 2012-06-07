@@ -46,7 +46,28 @@ var playTime = function (playingTime) {
 	return;
 };
 
+// Double Argument Function
+var feedMeSomething = function (pronoun, typeOfFood) {
+	if ( foodType === "cereal" ) {
+		say( "\"" + pronoun + " thinking of eating " + typeOfFood + "\"" );
+	} else {
+		say( "\"" + pronoun + " thinking of eating " + typeOfFood + "\"" );
+	};
+};
 
+var feedingTime = function (pronoun , typeOfYummies) {
+	if ( foodType === "hamburgers" ) {
+		say("\"" + pronoun + " wanting to eat " + typeOfYummies + "!\"");
+		say("I search the kitchen for some " + foodType + ".");
+		say("So I start grilling up some nice, juicy " + foodType + " in the kitchen.");
+		say("What condiments should I slather over my buns?");
+	} else {
+		say("\"" + pronoun + " wanting to eat " + typeOfYummies + "!\"");
+		say("I search the kitchen for some " + foodType + ".");
+		say("So I start cooking up some nice, flavorful " + foodType + " on the stove.");
+		say("What kinds of pasta do I have?");
+	};
+};
 
 
 // Output of variables to make sure they work.
