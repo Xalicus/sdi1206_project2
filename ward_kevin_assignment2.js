@@ -3,7 +3,7 @@
 	Name: Deliverable 2
 	Theme: Puggle Rampage!
 */
-// alert("JavaScript works!");
+
 // Say function for space saving code power!
 var say = function(message) { console.log(message); };
 
@@ -113,20 +113,6 @@ var goToStores = function(storeNames, minPerStore) {
 	};
 };
 
-// Output of variables to make sure they work.
-/*
-say(puggleRam);
-say(cuteLevel1);
-say(cuteLevel2);
-say(howManyDogs);
-say(toRam1);
-say(toRam2);
-say(wifeJoins);
-say(laugh);
-*/
-
-
-
 // My Puggle Story in code.
 backStory();
 say("\*I choose to tease the Puggle by saying, " + cuteLevel1 + " and " + cuteLevel2 + "\"");
@@ -170,29 +156,3 @@ say("\*I say.\* \"Sure, that sound\'s great\"");
 goToStores(storeNames, minPerStore);
 say("\"That was fun, let\'s do it again tomorrow!\"");
 say("\"The End!\"");
-
-/*
-Puggle Rampage!!!
-
-Me and my wife have 2 cute dogs. One is a boy Chihuahua mix, and the other is a 
-female Puggle. Like I said they are both cute, but the Puggle can get really hyper. 
-If one of us teases her too much she'll start whining and get all hyper and move 
-around a lot, wagging her tail and jumping up on one of us. We like to call it the 
-Puggle Rampage! How we tease her is to say "Isn't she so cute?" and to whine back 
-at her, while moving my head side to side. She hates that, but it's so cute. So one 
-day I choose to tease the Puggle. She can either not get annoyed and we can have 
-furry hugs, or get really hyper and try to bite my face off. What's really fun is 
-if our Chihuahua gets in the mix, then we have 2 dogs getting hyper and playing with 
-each other. He could either just mind his own business and just lay around, or he 
-could join the mix and also try to bite my face off! Then we have a Puggle Rampage!
-
-* to tease the puggle or not?
-	* I tease the Puggle
-	* I don't tease the Puggle
-* Will the Chihuahua join in?
-	* Chihuahua bites face off
-	* Chihuahua leaves it to the Puggle
-*My wife wants to join in the Puggle rampage
-	* She joins and they bite both our faces off
-	* She stays back and laughs at my missing face
-*/
