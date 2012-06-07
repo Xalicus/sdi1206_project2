@@ -115,6 +115,29 @@ var song = function () {
 	return noCash;
 };
 
+// For-Loop Function
+var shopOneStore = function(storeName, minThisStore){
+	say("\"Shopping at the " + storeName + " for "
+		+ minThisStore + " minutes.\"");
+	for (var minutes = 0; minutes < minThisStore; minutes += 5){
+		var minRemain = minThisStore - minutes;
+		say( "\"" + minutes + " have past, " + minRemain + " to go!\"" );
+	};
+	
+	say( "\"I'm done with the store " + storeName + ", for now! BWAAA HAAA HAAA!!\"" );
+};
+
+var shopOneStore = function(storeName, minThisStore){
+	say("\"Shopping at " + storeName + " for "
+		+ minThisStore + " minutes.\"");
+	for (var minutes = 0; minutes < minThisStore; minutes += 5){
+		var minRemain = minThisStore - minutes;
+		say( "\"" + minutes + " have past, " + minRemain + " left to go!\"" );
+	};
+	
+	say( "\"I'm done with " + storeName + ", for now! *Snicker*\"" );
+};
+
 
 
 
