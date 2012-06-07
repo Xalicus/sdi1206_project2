@@ -69,6 +69,36 @@ var feedingTime = function (pronoun , typeOfYummies) {
 	};
 };
 
+// Double String Function
+var availableFood = function (foodType) {
+	if ( foodType === "cereal" ){
+		for (var i = 0, j = cerealTypes.length; i < j; i++) {
+			say( "The cereal " + cerealTypes[i] + ", " + cerealAvailable[i] + " available." );
+		};
+	} else {
+		for (var i = 0, j = ramenTypes.length; i < j; i++) {
+			say( "The " + ramenTypes[i] + ", " + ramenAvailable[i] + " available." );
+		};
+	};
+};
+
+var yumFood = function (foodType) {
+	if ( foodType === "hamburgers" ){
+		for (var i = 0, j = bunToppings.length; i < j; i++) {
+			say( "The condiments " + bunToppings[i] + ", " + condosAvail[i] + " good." );
+		};
+	} else {
+		for (var i = 0, j = pastaTypes.length; i < j; i++) {
+			say( "The " + pastaTypes[i] + ", " + pastaAvail[i] + " available." );
+		};
+	};
+};
+
+
+
+
+
+
 
 // Output of variables to make sure they work.
 say(puggleRam);
