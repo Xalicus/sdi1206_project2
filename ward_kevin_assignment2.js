@@ -8,45 +8,56 @@
 var say = function(message) { console.log(message); };
 
 // Variables
+var backStory = function () { say("\"My wife Katt and I have " + howManyDogs + " cute dogs.\"");
+				say("\"One is a boy Chihuahua, the other is a female Puggle.\"");
+				say("\"They are both so cute, but the Puggle can get really hyper.\"");
+				say("\"If one of us teases her too much she\'ll start whining and get all hyper.\"");
+				say("\"She\'ll move around a lot, wagging her tail and jumping up on us.\"");
+				say("\"We like to call it the " + puggleRam + "\"");
+};
 var puggleRam = "\"Puggle Rampage!\"";
 var cuteLevel1 = "\"Isn\'t she so cute?\"";
 var cuteLevel2 = "\"She\'s so CUTE!!!\"";
 var howManyDogs = 2;
+var teaseTime = true;
 var toRam1 = true;
 var toRam2 = true;
 var wifeJoins = false;
 var laugh = "\"Bwaahaahaa, Ur missing ur face!\"";
 
 
-// Argument Funtion
-var snoozeAlarm = function (snooze) {
-	annoyingMe = true;
-	if (snooze === annoyingMe) {
-		say( "\"Shut up you stupid bleeping alarm!\" " + "\*I snooze the alarm.\*" );
-		say( "\*15 minutes later...\* " + "\"OK, I\'M UP! Happy now, alarm?\"" );
-		say( "\*The alarm smirks\*" );
-	}
-	else {
-		say( "\"Ok, ok, I\'ll get up now..." + "stupid alarm...\"" );
-		say( "\*The alarm smirks\*" );
-	}
-	return;
-};
 
-var playTime = function (playingTime) {
-	longTime = true;
-	if (playingTime === longTime) {
-		say("How long should I play for?");
-		say("I'd say about 5 hours today.");
+// Old Variables
+var foodType = "hamburgers"; // "hamburgers" or "pasta"
+var bunToppings = ["mayo, mustard, BBQ sauce, and cheese slices" , "ketchup, mustard, relish, and cheese slices"];
+var pastaTypes = ["Chicken Alfredo" , "Spagetti"];
+var condosAvail = [ "sound" , "don\'t sound" ];
+var pastaAvail = [ "is" , "is" ];
+var myCash = 25; // It should be more than just $25. *Sniff, sniff*
+var storeNames = [ "GameStop", "Walmart", "Bookman\'s", "Movie Theater" ],
+	minPerStore = [ 50, 20, 30, 120 ];
+var hoursLeft = 2;
+
+
+// Argument Function
+// How long should I tease the Puggle?
+// Done
+var teaseTime = function (teasingTime) {
+	aWhile = false;
+	if (teasingTime === aWhile) {
+		say("\"Hey Katt, how long should I tease her for?\"");
+		say("\*Katt says.\* \"I\'d say about 10 minutes today.\"");
 	}
 	else {
-		say("I shouldn't play too long.");
-		say("Maybe only for like 2 hours.");
+		say("\"I shouldn\'t tease her for very long, should I?\"");
+		say("\*Katt says.\* \"Maybe only for 10 seconds.\"");
 	}
 	return;
 };
 
 // Double Argument Function
+// Note about what it does.
+// Not Done
 var feedMeSomething = function (pronoun, typeOfFood) {
 	if ( foodType === "cereal" ) {
 		say( "\"" + pronoun + " thinking of eating " + typeOfFood + "\"" );
@@ -70,6 +81,8 @@ var feedingTime = function (pronoun , typeOfYummies) {
 };
 
 // Double String Function
+// Note about what it does.
+// Not Done
 var availableFood = function (foodType) {
 	if ( foodType === "cereal" ){
 		for (var i = 0, j = cerealTypes.length; i < j; i++) {
@@ -95,16 +108,8 @@ var yumFood = function (foodType) {
 };
 
 // While-Loop Function
-var song = function () {
-	while (myMoney > 0) {
-		say( "\"" + myMoney + " dollars are fleeing my wallet.\"" );
-		myMoney--;
-	};
-	say( "\"No more dollars in my wallet.\"" );
-	noMoney = 0;
-	return noMoney;
-};
-
+// Note about what it does.
+// Not Done
 var song = function () {
 	while (myCash > 0) {
 		say( "\"" + myCash + " dollars are fleeting. Oh NOES!!!\"" );
@@ -116,17 +121,8 @@ var song = function () {
 };
 
 // For-Loop Function
-var shopOneStore = function(storeName, minThisStore){
-	say("\"Shopping at the " + storeName + " for "
-		+ minThisStore + " minutes.\"");
-	for (var minutes = 0; minutes < minThisStore; minutes += 5){
-		var minRemain = minThisStore - minutes;
-		say( "\"" + minutes + " have past, " + minRemain + " to go!\"" );
-	};
-	
-	say( "\"I'm done with the store " + storeName + ", for now! BWAAA HAAA HAAA!!\"" );
-};
-
+// Note about what it does.
+// Not Done
 var shopOneStore = function(storeName, minThisStore){
 	say("\"Shopping at " + storeName + " for "
 		+ minThisStore + " minutes.\"");
@@ -146,17 +142,10 @@ var goToStores = function(storeNames, minPerStore) {
 	};
 };
 
-var goToStores = function(storeNames, minPerStore) {
-	for (var storeNumber = 0; storeNumber < storeNames.length; storeNumber++){
-		var storeName = storeNames[storeNumber],
-			minThisStore = minPerStore[storeNumber];
-		shopOneStore( storeName, minThisStore );
-	};
-};
-
 
 
 // Output of variables to make sure they work.
+/*
 say(puggleRam);
 say(cuteLevel1);
 say(cuteLevel2);
@@ -165,19 +154,26 @@ say(toRam1);
 say(toRam2);
 say(wifeJoins);
 say(laugh);
+*/
 
 
 
 
-
-// My Story in code.
+// My Puggle Story in code.
+/* backStory()
 say("\"My wife and I have " + howManyDogs + " cute dogs.\"");
 say("\"One is a boy Chihuahua, the other is a female Puggle.\"");
 say("\"They are both so cute, but the Puggle can get really hyper.\"");
 say("\"If one of us teases her too much she\'ll start whining and get all hyper.\"");
-say("\"She\'ll move around a lot, wagging her tail and jumping on up on us.\"");
+say("\"She\'ll move around a lot, wagging her tail and jumping up on us.\"");
 say("\"We like to call it the " + puggleRam + "\"");
+*/
+
+backStory();
 say("\*I choose to tease the Puggle by saying, " + cuteLevel1 + " and " + cuteLevel2 + "\"");
+
+var toTease = teaseTime(true);
+
 say("\*I also wag my head back and forth, while whining back at her.\*");
 if (toRam1 === true) {
 	say("\*She gets upset and hyper and she bites my face off!\*");
@@ -201,6 +197,57 @@ if (toRam2 === true){
 	};
 };
 say("\"The End!\"");
+
+
+
+// My Procrastination Adventure!
+
+say("It\'s 10am, time to get on to my schoolwork for the week.");
+
+say("I don\'t really feel up to it, so I make a decision to play my game console instead.");
+
+// var gameTime = playTime(true);
+
+say("Crap, it\'s really three o\'clock, I should get started on school.");
+
+say("But, it can wait a couple more hours, so I decide to get something to eat.");
+
+say("Oh but what to eat?");
+
+say("I have pasta or hamburgers, hmmm.");
+
+feedingTime("I\'m" , foodType);
+
+yumFood(foodType);
+
+say("I eat up all the yumminess, and finally decide I\'m ready for the week\'s schoolwork.");
+
+say("But now I only have a couple hours left in the day until it\'s due.");
+
+say("What should I do?");
+
+say("I sing a song to myself!");
+
+song();
+
+say("A quick glance at my wallet confirms the song\'s truth...");
+
+say("I have " + noCash + " cash in my wallet, darn!");
+
+say("Okay, I think I\'m done singing for the week... Now what?");
+
+say("There isn't much time left today. What to do now?");
+
+say("Cram as much as I can in the hours I have left, or go Shopping?");
+
+say("Number 2 sounds really good to me.");
+
+goToStores(storeNames, minPerStore);
+
+say("\"Now it's really late! I need to get some rest.\"");
+
+say("The End!");
+
 
 
 /*
