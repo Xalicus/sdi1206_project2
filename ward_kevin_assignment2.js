@@ -138,7 +138,21 @@ var shopOneStore = function(storeName, minThisStore){
 	say( "\"I'm done with " + storeName + ", for now! *Snicker*\"" );
 };
 
+var goToStores = function(storeNames, minPerStore) {
+	for (var storeNumber = 0; storeNumber < storeNames.length; storeNumber++){
+		var storeName = storeNames[storeNumber],
+			minThisStore = minPerStore[storeNumber];
+		shopOneStore( storeName, minThisStore );
+	};
+};
 
+var goToStores = function(storeNames, minPerStore) {
+	for (var storeNumber = 0; storeNumber < storeNames.length; storeNumber++){
+		var storeName = storeNames[storeNumber],
+			minThisStore = minPerStore[storeNumber];
+		shopOneStore( storeName, minThisStore );
+	};
+};
 
 
 
