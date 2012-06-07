@@ -94,7 +94,26 @@ var yumFood = function (foodType) {
 	};
 };
 
+// While-Loop Function
+var song = function () {
+	while (myMoney > 0) {
+		say( "\"" + myMoney + " dollars are fleeing my wallet.\"" );
+		myMoney--;
+	};
+	say( "\"No more dollars in my wallet.\"" );
+	noMoney = 0;
+	return noMoney;
+};
 
+var song = function () {
+	while (myCash > 0) {
+		say( "\"" + myCash + " dollars are fleeting. Oh NOES!!!\"" );
+		myCash--;
+	};
+	say( "\"No more cash in my wallet. What should I do?\"" );
+	noCash = 0;
+	return noCash;
+};
 
 
 
